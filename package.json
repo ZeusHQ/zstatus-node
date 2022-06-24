@@ -1,0 +1,15 @@
+{
+  "name": "@zeushq/zstatus-node",
+  "version": "1.0.0",
+  "description": "A NodeJS client for working with the ZStatus API (https://zstatus.io).",
+  "main": "index.js",
+  "types": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
