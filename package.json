@@ -1,9 +1,9 @@
 {
   "name": "@zeushq/zstatus-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A NodeJS client for working with the ZStatus API (https://zstatus.io).",
-  "main": "index.js",
-  "types": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -11,9 +11,18 @@
     "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
-  "author": "",
+  "author": "Eric Campbell <eric@zeusdev.co>",
+  "keywords": [
+    "zstatus",
+    "zeus"
+  ],
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2"
