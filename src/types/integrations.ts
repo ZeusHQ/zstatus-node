@@ -1,8 +1,7 @@
-import { APIUser } from "./auth";
-
+import { APIUser } from './auth';
 
 export enum APIIntegrationType {
-    PagerDuty = "PagerDuty",
+  PagerDuty = 'PagerDuty',
 }
 
 /*
@@ -13,29 +12,29 @@ export enum APIIntegrationType {
 export type APIIntegrationsResponse = APIIntegration[];
 
 export interface APIIntegrationDeleteResponse {
-    success: boolean;
+  success: boolean;
 }
 
 export interface CreateIntegrationProps {
-    pageId: string;
-    data?: Record<string, string>;
-    type: APIIntegrationType;
+  pageId: string;
+  data?: Record<string, string>;
+  type: APIIntegrationType;
 }
 
 export interface UpdateIntegrationProps {
-    id: string;
-    data?: Record<string, string>;
+  id: string;
+  data?: Record<string, string>;
 }
 
 export interface APIIntegration extends CreateIntegrationProps {
-    id: string;
-    creatorId: string;
-    creator: APIUser;
-    createdAt: string;
-    updatedAt: string;
+  id: string;
+  creatorId: string;
+  creator: APIUser;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface APIIntegrationSearchArgs {
-    pageId: string;
-    type?: APIIntegrationType;
+  pageId: string;
+  type?: APIIntegrationType;
 }
