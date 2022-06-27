@@ -14,6 +14,7 @@ const api = new ZStatusClient({
 ## Pagination
 ZStatus uses cursor based pagination with the following param structure:
 
+```
 interface APIPaginationArgs {
   skip?: number;
   take?: number;
@@ -22,6 +23,7 @@ interface APIPaginationArgs {
   first?: number;
   last?: number;
 }
+```
 
 ## Search a resource
 ```
@@ -30,6 +32,7 @@ const services = await api.getServices({ })
 
 Searches will return the following paginated response structure:
 
+```
 interface PaginatedResponse<T> {
   edges: APINode<T>[];
   totalCount: number;
@@ -47,6 +50,7 @@ interface APIPageInfo {
   startCursor?: string;
   endCursor?: string;
 }
+```
 
 ## Get a resource record
 ```
