@@ -1,6 +1,6 @@
 {
   "name": "@zeushq/zstatus-node",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A NodeJS client for working with the ZStatus API (https://zstatus.io).",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
