@@ -3,6 +3,9 @@
 ## Install
 `npm i zstatus-node` or `yarn add zstatus-node`
 
+## Documentation
+https://docs.zstatus.io
+
 ## Create an API Client
 Create an API key for your page on the Api Keys tab of your page management dashboard.
 ```
