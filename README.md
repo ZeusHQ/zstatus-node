@@ -59,12 +59,16 @@ const services = await api.getService("cl4ws9q7e0213tovc0kd5rl8m")
 
 ## Create a resource record
 ```
-const service = await api.createService({ name: "API" })
+const service = await api.createService({ 
+  name: "API"
+})
 ```
 
 ## Update a resource record
 ```
-const service = await api.updateService("cl4ws9q7e0213tovc0kd5rl8m", { name: "Frontend" })
+const service = await api.updateService("cl4ws9q7e0213tovc0kd5rl8m", { 
+  name: "Frontend"
+})
 ```
 
 ## Delete a resource record
