@@ -26,7 +26,8 @@ export interface APIPageAvailabilityResponse {
 export interface CreatePageProps {
   name: string;
   type: APIPageType;
-  slug?: string;
+  subdomain?: string;
+  customDomain?: string;
   services?: string;
   operationalStatusId?: string;
   resolvedStatusId?: string;
@@ -46,7 +47,8 @@ export interface UpdatePageProps {
   headline?: string;
   about?: string;
   type?: APIPageType;
-  slug?: string;
+  subdomain?: string;
+  customDomain?: string;
 
   operationalStatusId?: string;
   resolvedStatusId?: string;
@@ -68,7 +70,8 @@ export interface UpdatePageProps {
 
 export interface APIPage extends CreatePageProps {
   id: string;
-  slug: string;
+  subdomain: string;
+  customDomain?: string;
 
   active: boolean;
   headline: string;
